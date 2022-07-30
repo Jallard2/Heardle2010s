@@ -77,10 +77,13 @@ function guessUpdater() {
   else {
     length = 30;
   }
+  console.log(length);
 }
 
 function check() {
   console.log("Check")
+  document.getElementById("guess").value = "";
+  guessUpdater();
 }
 
 async function play() {
@@ -98,8 +101,6 @@ async function play() {
 function getGuess() {
   let x = document.getElementById("guess").value;
   console.log(x);
-  document.getElementById("guess").value = "";
-
   guessUpdater();
 }
 
