@@ -9,7 +9,8 @@
     <body class="all" onload = getSong()>
         <div class="container">
             <h1>2010s Heardle Game</h1>
-            <form onsubmit = "getGuess();return false" id="guessing_form" class="form-horizontal">
+            <h2 id = "title">Guess What Song This Is</h2>
+            <form onsubmit = "return false" id="guessing_form" class="form-horizontal">
               <div class = "buttons">
                 <button type ="button" onclick ="skip()" class="btn btn-default" id = "skipButton">Skip</button>
                 <button type ="button" onclick ="play()" class="btn btn-default" id = "playButton">Play</button>

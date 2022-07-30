@@ -13,8 +13,14 @@ h1 {
 	color: white;
 }
 
+h2 {
+	margin-top: 20px;
+	font-size: 25px;
+	color: white;
+}
+
 #guessing_form {
-	margin: 700px auto 60px;
+	margin: 650px auto 60px;
 }
 
 .btn-default {

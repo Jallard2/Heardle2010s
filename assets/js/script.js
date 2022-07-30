@@ -32,21 +32,23 @@ let guessNumber = 1;
 let length = 1;
 let song = "";
 let artist = "";
+let gotIt = false;
 
 const sleep = (milliseconds) => {
   return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
 
 function getSong() {
-  let index = Math.floor(Math.random() * 11);
+  // let index = Math.floor(Math.random() * 11);
+  let index = 0;
   songsList = ['Imagine Dragons - Demons.mp3', 'Imagine Dragons - Radioactive.mp3']
   if (index > songsList.length) {
     index = 0;
   }
   info = songsList[index].split("-");
-  song = info[0].trim();
-  artist = info[1].trim();
-  artist = artist.replace(".mp3", "")
+  song = info[1].trim();
+  artist = info[0].trim();
+  song = song.replace(".mp3", "")
   
 }
 
@@ -56,6 +58,9 @@ function skip() {
 }
 
 function guessUpdater() {
+  if (gotIt) {
+    return;
+  }
   guessNumber += 1;
   console.log(guessNumber)
 
@@ -75,6 +80,7 @@ function guessUpdater() {
     length = 18;
   }
   else {
+    document.getElementById("title").innerHTML = `The Song Was ${song} by ${artist}`
     length = 30;
   }
   console.log(length);
@@ -82,6 +88,7 @@ function guessUpdater() {
 
 function check() {
   console.log("Check")
+  getGuess();
   document.getElementById("guess").value = "";
   guessUpdater();
 }
@@ -91,7 +98,7 @@ async function play() {
   var audio = new Audio()
   // audio.src = "songs/Imagine Dragons -Radioactive.mp3";
   console.log(song)
-  audio.src = `songs/${song}-${artist}.mp3`
+  audio.src = `songs/${artist}-${song}.mp3`
   audio.play();
   await sleep(length*1000);
   audio.pause()
@@ -101,10 +108,13 @@ async function play() {
 function getGuess() {
   let x = document.getElementById("guess").value;
   console.log(x);
-  guessUpdater();
+  console.log(`${song} by ${artist}`);
+  if (x == `${song} by ${artist}` || x == `${song} By ${artist}` || x == `${song} - ${artist}`) {
+    gotIt = true;
+    document.getElementById("title").innerHTML = "You Got It!"
+    length = 30;
+
+  }
 }
 
-function isGuessCorrect() {
-
-}
 
