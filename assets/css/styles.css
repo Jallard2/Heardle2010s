@@ -1,0 +1,53 @@
+.all {
+	background-color: black;
+}
+
+.container {
+	max-width: 980px;
+	text-align: center;
+	margin: 20px auto;
+}
+
+h1 {
+	margin-bottom: 20px;
+	color: white;
+}
+
+#guessing_form {
+	margin: 700px auto 60px;
+}
+
+.btn-default {
+	margin: 0 75px 0 75px;
+	margin-bottom: 20px;
+}
+
+#skipButton {
+	background-color: rgb(133, 133, 133);
+}
+
+#submitButton {
+	background-color: limegreen
+}
+
+#playButton {
+	background-color: white;
+}
+#guess {
+	border-radius: 12px;
+}
+
+.input-group {
+	margin-left: 50%;
+}
+
+.glyphicon {
+	font-size: 18px;
+	z-index: 20;
+	cursor: pointer;
+}
+
+.glyphicon-search{
+	position: relative;
+	right: 30px;
+}

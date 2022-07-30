@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head land="en">
+        <meta charset="utf-8">
+        <title>2010s Heardle</title>
+        <link href="node_modules/bootswatch/flatly/bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <link href="assets/css/styles.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body class="all" onload = getSong()>
+        <div class="container">
+            <h1>2010s Heardle Game</h1>
+            <form onsubmit = "getGuess();return false" id="guessing_form" class="form-horizontal">
+              <div class = "buttons">
+                <button type ="button" onclick ="skip()" class="btn btn-default" id = "skipButton">Skip</button>
+                <button type ="button" onclick ="play()" class="btn btn-default" id = "playButton">Play</button>
+                <button type="button" onclick="check()" class="btn btn-default" id= "submitButton">Submit</button>
+              </div>
+                <div class="form-group">
+                  <div class="col-xs-12 col-md-6 col-md-offset-10">
+                    <div class="input-group">
+                      <input type="text" class="form-control" autocomplete = "off" id="guess" placeholder="Enter A Guess...">
+                      <span class="input-group-btn">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </form>
+        </div>
+
+
+
+
+        <!-- The jQuery library -->
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+        <!-- The Moment.js library -->
+        <script src="node_modules/moment/moment.js"></script>
+
+        <!-- Including our own JavaScript file -->
+        <script src="assets/js/script.js"></script>
+
+    </body>
+</html>
