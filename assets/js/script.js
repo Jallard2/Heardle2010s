@@ -35,6 +35,7 @@ let artist = "";
 let gotIt = false;
 let songsList = []
 let all = ""
+let playing = false;
 
 const sleep = (milliseconds) => {
   return new Promise(resolve => setTimeout(resolve, milliseconds))
@@ -115,6 +116,10 @@ function check() {
 }
 
 async function play() {
+  if (playing == true) {
+    return;
+  }
+  playing = true;
   console.log("Play");
   var audio = new Audio()
   // audio.src = "songs/Imagine Dragons -Radioactive.mp3";
@@ -123,6 +128,7 @@ async function play() {
   audio.play();
   await sleep(length*1000);
   audio.pause()
+  playing = false;
 }
 
 function addingFilterList() {
