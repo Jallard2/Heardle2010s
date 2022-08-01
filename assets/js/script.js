@@ -113,6 +113,7 @@ function check() {
     guessUpdater(x);
   }
   document.getElementById("guess").value = "";
+  guessCorrector();
 }
 
 async function play() {
@@ -125,6 +126,7 @@ async function play() {
   // audio.src = "songs/Imagine Dragons -Radioactive.mp3";
   console.log(song)
   audio.src = `songs/${song} - ${artist}.mp3`
+  audio.volume = 0.25;
   audio.play();
   await sleep(length*1000);
   audio.pause()
