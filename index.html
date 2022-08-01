@@ -3,7 +3,7 @@
     <head land="en">
         <meta charset="utf-8">
         <title>2010s Heardle</title>
-        <link href="node_modules/bootswatch/flatly/bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
         <link href="assets/css/styles.css" type="text/css" rel="stylesheet" />
     </head>
     <body class="all" onload = "getSong(); addingFilterList(); guessCorrector()">
@@ -25,14 +25,11 @@
                 <button type="button" onclick="check()" class="btn btn-default" id= "submitButton">Submit</button>
               </div>
                 <div class="form-group">
-                  <div class="col-xs-12 col-md-6 col-md-offset-10">
+                  <div class="">
                     <div class="input-group">
                       <input type="text" onkeyup = "guessCorrector()"class="form-control" autocomplete = "off" id="guess" placeholder="Enter A Guess...">
                       <ul id = "myUL">
                       </ul>
-                      <span class="input-group-btn">
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                      </span>
                     </div>
                   </div>
                 </div>
