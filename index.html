@@ -6,11 +6,19 @@
         <link href="node_modules/bootswatch/flatly/bootstrap.min.css" type="text/css" rel="stylesheet" />
         <link href="assets/css/styles.css" type="text/css" rel="stylesheet" />
     </head>
-    <body class="all" onload = getSong()>
+    <body class="all" onload = "getSong(); addingFilterList(); guessCorrector()">
         <div class="container">
             <h1>2010s Heardle Game</h1>
-            <h2 id = "title">Guess What Song This Is</h2>
+            <h2 id = "title">Guess The Song</h2>
             <form onsubmit = "return false" id="guessing_form" class="form-horizontal">
+              <div class = "guessingArea">
+                <div id = "guess1">1</div>
+                <div id = "guess2">2</div>
+                <div id = "guess3">3</div>
+                <div id = "guess4">4</div>
+                <div id = "guess5">5</div>
+                <div id = "guess6">6</div>
+              </div>
               <div class = "buttons">
                 <button type ="button" onclick ="skip()" class="btn btn-default" id = "skipButton">Skip</button>
                 <button type ="button" onclick ="play()" class="btn btn-default" id = "playButton">Play</button>
@@ -19,7 +27,9 @@
                 <div class="form-group">
                   <div class="col-xs-12 col-md-6 col-md-offset-10">
                     <div class="input-group">
-                      <input type="text" class="form-control" autocomplete = "off" id="guess" placeholder="Enter A Guess...">
+                      <input type="text" onkeyup = "guessCorrector()"class="form-control" autocomplete = "off" id="guess" placeholder="Enter A Guess...">
+                      <ul id = "myUL">
+                      </ul>
                       <span class="input-group-btn">
                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                       </span>

@@ -20,11 +20,29 @@ h2 {
 }
 
 #guessing_form {
-	margin: 650px auto 60px;
+	margin: 50px auto 60px;
+}
+
+.guessingArea {
+	display: grid;
+	grid-template-columns: auto;
+	gap: 5px;
+	padding: 5px;
+}
+
+.guessingArea > div {
+	background-color: lightgray;
+	text-align: center;
+  	padding: 10px 0;
+  	font-size: 30px;
+}
+
+#myUL > li {
+	color: white;
 }
 
 .btn-default {
-	margin: 0 75px 0 75px;
+	margin: 100px 75px 0 75px;
 	margin-bottom: 20px;
 }
 
@@ -41,6 +59,8 @@ h2 {
 }
 #guess {
 	border-radius: 12px;
+	padding-right: 50px;
+	margin-bottom: 20px;
 }
 
 .input-group {
