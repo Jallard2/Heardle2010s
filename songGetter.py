@@ -10,7 +10,7 @@ from pydub import AudioSegment
 
 class Songs():
     def __init__(self):
-        self.api = Api(api_key = "AIzaSyCJz3EYWOZkUUKlIL_CCQW-19R1IDPw5tU")
+        self.api = Api(api_key = "KEY")
         self.savePATH = r"C:\Users\Jacob\Desktop\2010s Heardle\Heardle2010s\songs"
 
     async def linksAsync(self):
